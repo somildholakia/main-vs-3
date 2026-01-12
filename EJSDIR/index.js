@@ -3,10 +3,14 @@ const path = require("path");
 const app = express();
 const instaData = require("./data.json");
 
+
+app.use(express.static(path.join(__dirname,"public")));
+
+
 const port = 8080;
 app.set("view engine","ejs");
 app.set("views", path.join(__dirname,"views"))
-
+ 
 app.listen(port,()=> {
     console.log(`Port at ${port}`)
 })
