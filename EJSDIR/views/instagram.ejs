@@ -9,5 +9,23 @@
     <h2> This page belongs to <%= data.name %></h2>
     <button>Follow</button>
     <button>Message</button>
+
+    <p> 
+        Followers: <%= data.followers %> &ensp;
+        Following: <%= data.following %> 
+    </p>
+    <hr>
+
+    <% for(let post of data.posts) { %>
+
+        <img style="max-width: 200px;" src="<%=post.image %>" alt="A photo">
+
+        <p> 
+            
+        Likes: <%= post.likes %> &ensp;
+        Comments: <%= post.comments %> 
+    
+        </p>
+    <% } %>
 </body>
 </html>

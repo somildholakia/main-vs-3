@@ -13,8 +13,9 @@ app.listen(port,()=> {
 
 app.get("/ig/:username",(req,res) =>{
     let { username } = req.params;
-    console.log(instaData);
-    res.render("instagram.ejs", { data:instaData[username] })
+    const data = instaData[username];    
+    console.log(data)
+    res.render("instagram.ejs", { data })
     
 });
 
